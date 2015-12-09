@@ -1,0 +1,27 @@
+
+<table class="ui celled table">
+  <thead>
+    <tr><th>Name</th>
+    <th>Description</th>
+  </tr></thead>
+  <tbody>
+    {{#each model as |release|}}
+    <tr>
+      <td>
+        <div class="ui ribbon label">{{release.name}}</div>
+      </td>
+      <td>{{release.description}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+
+<button class="ui primary button">
+  Save
+</button>
+<button class="ui button">
+  Discard
+</button>
+
+{{outlet}}
