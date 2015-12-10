@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('release');
+  this.route('releases');
 });
 
 export default Router;
