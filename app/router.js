@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 
 Router.map(function () {
   this.route('releases');
+  this.route('environments');
 });
 
 export default Router;

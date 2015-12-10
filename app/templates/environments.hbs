@@ -1,0 +1,18 @@
+<table class="ui celled table">
+<thead>
+  <tr>
+    <th>Name</th>
+  </tr>
+</thead>
+<tbody>
+  {{#each model as |environment|}}
+  <tr>
+    <td>
+      <div class="ui label">{{environment.name}}</div>
+    </td>
+  </tr>
+  {{/each}}
+</tbody>
+</table>
+
+{{outlet}}
