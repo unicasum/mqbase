@@ -7,15 +7,6 @@ export default Ember.Route.extend({
     return fetch('data/releases.json').then(function (response) {
       return response.json().then(json => json.releases);
     });
-    /*
-    return [{
-      "name": "R1",
-      "description": "description 1"
-    }, {
-      "name": "R2",
-      "description": "description 2"
-    }];
-    */
   }
 
 });
