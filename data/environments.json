@@ -1,16 +1,15 @@
 {
-  "environments": [
-    {
-      "name": "CIT1"
-    },
-    {
-      "name": "LUP1"
-    },
-    {
-      "name": "SIT1"
-    },
-    {
-      "name": "PRD1"
-    }
-  ]
+  "environments": [{
+    "name": "CIT1",
+    "state": "outdated"
+  }, {
+    "name": "LUP1",
+    "state": "outdated"
+  }, {
+    "name": "SIT1",
+    "state": "up-to-date"
+  }, {
+    "name": "PRD1",
+    "state": "up-to-date"
+  }]
 }
