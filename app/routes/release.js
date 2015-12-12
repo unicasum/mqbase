@@ -20,7 +20,10 @@ function makeRelease(json) {
 
 export default Ember.Route.extend({
   model(params) {
-    return fetch('data/releases.json').then(response => response.json().then(json => makeRelease(json.release[
-      params.release_id])));
+    return fetch('data/releases.json').then(response => response.json().then(json => {
+      console.log(`load: ${params.release_id}`);
+      return makeRelease(json.release[
+        params.release_id]);
+    }));
   }
 });

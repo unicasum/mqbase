@@ -15,6 +15,7 @@ Router.map(function () {
   this.route('environment', {
     path: '/environments/:environment_id'
   });
+  this.route('properties');
 });
 
 export default Router;
