@@ -1,0 +1,17 @@
+{
+  "components": {
+    "PRD": {
+      "type": "environment"
+    },
+    "comp1": {
+      "build": {
+        "propmerge": {
+          "source": "a.properties"
+        }
+      },
+      "dependencies": {
+        "comp2": {}
+      }
+    }
+  }
+}
