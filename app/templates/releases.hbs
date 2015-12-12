@@ -8,19 +8,14 @@
     {{#each model as |release|}}
     <tr>
       <td>
+        {{#link-to "release" release}}
         <div class="ui ribbon label">{{release.name}}</div>
+        {{/link-to}}
       </td>
       <td>{{release.description}}</td>
     </tr>
     {{/each}}
   </tbody>
 </table>
-
-<button class="ui primary button">
-  Save
-</button>
-<button class="ui button">
-  Discard
-</button>
 
 {{outlet}}

@@ -2,6 +2,7 @@ import Ember from 'ember';
 import fetch from 'fetch';
 
 
+
 function makeEnvironment(json) {
   return {
     name: json.name,
@@ -19,8 +20,8 @@ function makeEnvironment(json) {
 }
 
 export default Ember.Route.extend({
-  model() {
-    return fetch('data/environments.json').then(response => response.json().then(json => json.environments.map(e =>
-      makeEnvironment(e))));
+  model(params) {
+    return fetch('data/environments.json').then(response => response.json().then(json => makeEnvironment(json.environments[
+      params.environment_id])));
   }
 });

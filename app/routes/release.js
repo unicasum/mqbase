@@ -1,12 +1,12 @@
 import Ember from 'ember';
 import fetch from 'fetch';
 
-
-function makeEnvironment(json) {
+function makeRelease(json) {
   return {
     name: json.name,
     state: json.state,
-    get environment_id() {
+    description: json.description,
+    get release_id() {
       return this.name;
     },
     get outdated() {
@@ -19,8 +19,8 @@ function makeEnvironment(json) {
 }
 
 export default Ember.Route.extend({
-  model() {
-    return fetch('data/environments.json').then(response => response.json().then(json => json.environments.map(e =>
-      makeEnvironment(e))));
+  model(params) {
+    return fetch('data/releases.json').then(response => response.json().then(json => makeRelease(json.release[
+      params.release_id])));
   }
 });

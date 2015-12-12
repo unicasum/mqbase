@@ -8,7 +8,11 @@
   {{#each model as |environment|}}
   <tr>
     <td>
-      <div class="ui label"><i class="{{if environment.upToDate "green"}} {{if environment.outdated "red"}} warning sign icon"></i>{{environment.name}}</div>
+      <div class="ui label">
+        {{#link-to "environment" environment}}
+        <i class="{{if environment.upToDate "green"}} {{if environment.outdated "red"}} warning sign icon"></i>{{environment.name}}
+        {{/link-to}}
+      </div>
     </td>
   </tr>
   {{/each}}
