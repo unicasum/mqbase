@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "comp1": {
+      "coordinates": {
+        "version": "1.0.0"
+      }
+    }
+  }
+}

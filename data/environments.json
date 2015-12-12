@@ -1,0 +1,16 @@
+{
+  "environments": [
+    {
+      "name": "CIT1"
+    },
+    {
+      "name": "LUP1"
+    },
+    {
+      "name": "SIT1"
+    },
+    {
+      "name": "PRD1"
+    }
+  ]
+}
