@@ -8,9 +8,9 @@
   <thead>
     <tr>
       <th class="collapsing">Key</th>
-      <th>Input</th>
-      <th>Output</th>
-      <th>mixin level 1</th>
+      <th class="collapsing">Input</th>
+      <th class="collapsing">Output</th>
+      <th class="collapsing">mixin level 1</th>
       <th>mixin level 2</th>
     </tr>
   </thead>
@@ -18,18 +18,50 @@
 {{#each model as |property|}}
     <tr>
       <td class="collapsing">{{property.key}}</td>
-      <td>{{property.value}}</td>
-      <td>{{property.value}}</td>
-      <td><div class="ui blue label">
+      <td class="collapsing">{{property.value}}</td>
+      <td class="collapsing">{{property.value}}</td>
+      <!--td class="collapsing"><div class="ui blue label">
   shared
-</div>&nbsp;from mixin level 1</td>
-      <td><p><div class="ui red label">
+</div>&nbsp;from mixin level 1</td-->
+<td>
+<table class="ui table">
+  <thead>
+    <td class="collapsing"><div class="ui blue label">shared</div></td>
+  </thead>
+  <tbody>
+    <td class="collapsing">from mixin level 1</td>
+  </tbody>
+</table></td>
+<td>
+<table class="ui table">
+  <thead>
+    <td class="collapsing"><div class="ui red label">PRD1</div></td>
+    <td class="collapsing"><div class="ui purple label">HOT1</div></td>
+    <td class="collapsing"><div class="ui orange label">SIT1</div></td>
+    <td class="collapsing"><div class="ui brown label">LUP1</div></td>
+    <td class="collapsing"><div class="ui yellow label">REG1</div></td>
+    <td class="collapsing"><div class="ui yellow label">REG2</div></td>
+    <td class="collapsing"><div class="ui green label">CIT1</div></td>
+    <td class="collapsing"><div class="ui grey label">DEV1</div></td>
+  </thead>
+  <tbody>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+    <td class="collapsing">from mixin level 2</td>
+  </tbody>
+</table></td>
+      <!--<td><p><div class="ui red label">
   PRD1
 </div>&nbsp;from mixin level 2</p><p><div class="ui orange label">
   SIT1
 </div>&nbsp;from mixin level 2</p><div class="ui yellow label">
   REG1
-</div>&nbsp;from mixin level 2</td>
+</div>&nbsp;from mixin level 2</td>-->
     </tr>
 {{/each}}
   </tbody>
