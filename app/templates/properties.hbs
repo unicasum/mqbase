@@ -1,23 +1,39 @@
-<!--ul-->
+
     <h1>Properties</h1>
+    <h2>Input: url to the source property file e. g. tributum.properties as deployed by the vendor</h2>
+    <h2>Output: url to the output property file e. g. tributum.properties as deployed by ebs</h2>
+    <h2>mixin level 1: url to the shared property files e. g. shared/tributum.mixin.properties</h2>
+    <h2>mixin level 2: url to the environment property files e. g. [CIT1|REG1|REG2|SIT1|LUP1|HOT1|PRD1]/tributum.mixin.properties</h2>
     <table class="ui green striped table">
   <thead>
     <tr>
       <th class="collapsing">Key</th>
-      <th>Value</th>
+      <th>Input</th>
+      <th>Output</th>
+      <th>mixin level 1</th>
+      <th>mixin level 2</th>
     </tr>
   </thead>
   <tbody>
 {{#each model as |property|}}
-    <!--li><div>{{property.key}}</div> <div>{{property.value}}</div></li-->
     <tr>
       <td class="collapsing">{{property.key}}</td>
       <td>{{property.value}}</td>
+      <td>{{property.value}}</td>
+      <td><div class="ui blue label">
+  shared
+</div>&nbsp;from mixin level 1</td>
+      <td><p><div class="ui red label">
+  PRD1
+</div>&nbsp;from mixin level 2</p><p><div class="ui orange label">
+  SIT1
+</div>&nbsp;from mixin level 2</p><div class="ui yellow label">
+  REG1
+</div>&nbsp;from mixin level 2</td>
     </tr>
 {{/each}}
   </tbody>
 </table>
-<!--/ul-->
 
 {{outlet}}
 
