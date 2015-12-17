@@ -1,7 +1,23 @@
-<ul>
+<!--ul-->
+    <h1>Properties</h1>
+    <table class="ui green striped table">
+  <thead>
+    <tr>
+      <th class="collapsing">Key</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
 {{#each model as |property|}}
-    <li><div>{{property.key}}</div> <div>{{property.value}}</div></li>
+    <!--li><div>{{property.key}}</div> <div>{{property.value}}</div></li-->
+    <tr>
+      <td class="collapsing">{{property.key}}</td>
+      <td>{{property.value}}</td>
+    </tr>
 {{/each}}
-</ul>
+  </tbody>
+</table>
+<!--/ul-->
 
 {{outlet}}
+
