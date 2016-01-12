@@ -1,12 +1,3 @@
 {
-  "releases": [{
-    "name": "R1",
-    "description": "R1 description"
-  }, {
-    "name": "R2",
-    "description": "R2 description"
-  }, {
-    "name": "R3",
-    "description": "R3 description"
-  }]
+  "releases": ["R1", "R2", "R3"]
 }

@@ -1,29 +1,10 @@
 import Ember from 'ember';
-import fetch from 'fetch';
+import Releases from 'mqbase/models/Releases';
 
-function makeRelease(json) {
-  return {
-    name: json.name,
-    state: json.state,
-    description: json.description,
-    get release_id() {
-      return this.name;
-    },
-    get outdated() {
-      return this.state === 'outdated';
-    },
-    get upToDate() {
-      return this.state === 'up-to-date';
-    }
-  };
-}
 
 export default Ember.Route.extend({
   model(params) {
-    return fetch('data/releases.json').then(response => response.json().then(json => {
-      console.log(`load: ${params.release_id}`);
-      return makeRelease(json.release[
-        params.release_id]);
-    }));
+    console.log(`Release: ${params.release_id}`);
+    return Releases.find(params.release_id);
   }
 });

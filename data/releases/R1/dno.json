@@ -1,4 +1,5 @@
 {
+  "description": "the description R1",
   "dependencies": {
     "comp1": {
       "coordinates": {
