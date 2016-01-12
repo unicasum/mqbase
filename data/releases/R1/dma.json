@@ -21,6 +21,13 @@
       "dependencies": {
         "comp2": {}
       }
+    },
+    "comp2": {
+      "build": {
+        "propmerge": {
+          "source": "a.properties"
+        }
+      },
     }
   }
 }

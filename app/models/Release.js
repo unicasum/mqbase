@@ -19,11 +19,13 @@ export default class Release extends Base {
     console.log(`${this.name} ${JSON.stringify(dma.components)}`);
 
     Object.keys(dma.components).forEach(name => {
+      const coordinates = dno.components ? dno.components[name].coordinates : undefined;
+
       const c = dma.components[name];
       if (c.type === 'environment') {
-        environments[name] = components[name] = new Environment(name, c);
+        environments[name] = components[name] = new Environment(name, coordinates, c);
       } else {
-        components[name] = new Component(name, c);
+        components[name] = new Component(name, coordinates, c);
       }
     });
 

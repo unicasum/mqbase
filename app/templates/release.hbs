@@ -1,8 +1,13 @@
-<h1>Release</h1>
-{{model.name}}
+<h1>Release {{model.name}}</h1>
+
 {{model.description}}
+
+<ul>
 {{#each model.environmentsArray as |environment|}}
+<li>
 {{environment.name}}
+</li>
 {{/each}}
+</ul>
 
 {{outlet}}

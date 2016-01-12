@@ -1,8 +1,8 @@
 import Component from 'mqbase/models/Component';
 
 export default class Environment extends Component {
-  constructor(name, json) {
-    super(name, json);
+  constructor(name, coordinates, json) {
+    super(name, coordinates, json);
   }
 
   get servers() {

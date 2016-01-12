@@ -5,6 +5,26 @@
       "coordinates": {
         "version": "1.0.0"
       }
+    },
+    "comp2": {
+      "coordinates": {
+        "version": "7.0.0"
+      }
+    },
+    "PRD": {
+      "coordinates": {
+        "version": "5.0.0"
+      }
+    },
+    "CIT": {
+      "coordinates": {
+        "version": "2.0.0"
+      }
+    },
+    "SIT": {
+      "coordinates": {
+        "version": "3.0.0"
+      }
     }
   }
 }

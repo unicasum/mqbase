@@ -4,7 +4,7 @@ import Release from 'mqbase/models/Release';
 let releases;
 
 function loadRelease(name) {
-  //console.log(`loadRelease: ${name}`);
+  console.log(`loadRelease: ${name}`);
   return Promise.all([
     fetch(`data/releases/${name}/dno.json`).then(r => r.json()),
     fetch(`data/releases/${name}/dma.json`).then(r => r.json())
