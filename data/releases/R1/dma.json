@@ -3,6 +3,15 @@
     "PRD": {
       "type": "environment"
     },
+    "CIT": {
+      "type": "environment"
+    },
+    "SIT": {
+      "type": "environment"
+    },
+    "HOT": {
+      "type": "environment"
+    },
     "comp1": {
       "build": {
         "propmerge": {

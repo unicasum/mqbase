@@ -1,4 +1,8 @@
 <h1>Release</h1>
 {{model.name}}
 {{model.description}}
+{{#each model.environmentsArray as |environment|}}
+{{environment.name}}
+{{/each}}
+
 {{outlet}}

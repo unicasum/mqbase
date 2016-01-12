@@ -13,7 +13,7 @@ function loadRelease(name) {
     const dma = rs[1];
 
     console.log(`dno/dma ${name} ${JSON.stringify(dno)}, ${JSON.stringify(dma)}`);
-    return new Release(name, rs[0].description, dno, dma);
+    return new Release(name, dno, dma);
   });
 }
 

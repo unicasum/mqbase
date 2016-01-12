@@ -1,7 +1,7 @@
 import Base from 'mqbase/models/Base';
 
 export default class Component extends Base {
-  constructor(name, description) {
-    super(name, description);
+  constructor(name, json) {
+    super(name, json.description);
   }
 }
