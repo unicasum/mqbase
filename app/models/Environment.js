@@ -1,4 +1,5 @@
 import Component from 'mqbase/models/Component';
+import Server from 'mqbase/models/Server';
 
 export default class Environment extends Component {
   constructor(name, coordinates, json) {
