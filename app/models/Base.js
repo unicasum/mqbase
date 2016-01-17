@@ -1,3 +1,6 @@
+/* jslint node: true, esnext: true */
+"use strict";
+
 export default class Base {
   constructor(name, description) {
     //console.log(`Base ${name} ${description}`);

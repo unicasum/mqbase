@@ -1,3 +1,6 @@
+/* jslint node: true, esnext: true */
+"use strict";
+
 import Base from 'mqbase/models/Base';
 import Environment from 'mqbase/models/Environment';
 import Component from 'mqbase/models/Component';

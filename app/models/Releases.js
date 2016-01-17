@@ -1,3 +1,6 @@
+/* jslint node: true, esnext: true */
+"use strict";
+
 import fetch from 'fetch';
 import Release from 'mqbase/models/Release';
 

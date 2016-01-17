@@ -1,3 +1,6 @@
+/* jslint node: true, esnext: true */
+"use strict";
+
 import Component from 'mqbase/models/Component';
 import Server from 'mqbase/models/Server';
 

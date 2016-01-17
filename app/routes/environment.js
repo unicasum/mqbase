@@ -1,7 +1,8 @@
+/* jslint node: true, esnext: true */
+"use strict";
+
 import Ember from 'ember';
 import fetch from 'fetch';
-
-
 
 function makeEnvironment(json) {
   return {
