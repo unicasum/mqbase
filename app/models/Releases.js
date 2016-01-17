@@ -2,7 +2,7 @@
 "use strict";
 
 import fetch from 'fetch';
-import Release from 'mqbase/models/Release';
+import Release from './Release';
 
 let releases;
 

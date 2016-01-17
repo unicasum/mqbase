@@ -1,8 +1,8 @@
 /* jslint node: true, esnext: true */
 "use strict";
 
-import Component from 'mqbase/models/Component';
-import Server from 'mqbase/models/Server';
+import Component from './Component';
+import Server from './Server';
 
 export default class Environment extends Component {
   constructor(name, coordinates, json) {

@@ -1,9 +1,9 @@
 /* jslint node: true, esnext: true */
 "use strict";
 
-import Base from 'mqbase/models/Base';
-import Environment from 'mqbase/models/Environment';
-import Component from 'mqbase/models/Component';
+import Base from './Base';
+import Environment from './Environment';
+import Component from './Component';
 
 /*
 const typeToFactory = {

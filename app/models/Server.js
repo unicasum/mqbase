@@ -1,7 +1,7 @@
 /* jslint node: true, esnext: true */
 "use strict";
 
-import Base from 'mqbase/models/Base';
+import Base from './Base';
 
 export default class Server extends Base {
   constructor(name) {

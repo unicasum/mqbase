@@ -2,7 +2,7 @@
 "use strict";
 
 import Ember from 'ember';
-import Releases from 'mqbase/models/Releases';
+import Releases from '../models/Releases';
 
 
 export default Ember.Route.extend({
