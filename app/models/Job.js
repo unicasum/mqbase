@@ -3,8 +3,6 @@
 
 export default class Job {
   constructor() {
-    super();
-
     this._actions = [];
   }
 
