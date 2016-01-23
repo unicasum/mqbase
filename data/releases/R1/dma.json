@@ -1,33 +1,33 @@
 {
-   "components" : {
-      "SIT" : {
-         "type" : "environment"
-      },
-      "CIT" : {
-         "type" : "environment"
-      },
-      "comp2" : {
-         "build" : {
-            "propmerge" : {
-               "source" : "a.properties"
-            }
-         }
-      },
-      "comp1" : {
-         "build" : {
-            "propmerge" : {
-               "source" : "a.properties"
-            }
-         },
-         "dependencies" : {
-            "comp2" : {}
-         }
-      },
-      "HOT" : {
-         "type" : "environment"
-      },
-      "PRD" : {
-         "type" : "environment"
+  "components": {
+    "SIT": {
+      "type": "environment"
+    },
+    "CIT": {
+      "type": "environment"
+    },
+    "comp2": {
+      "build": {
+        "propmerge": {
+          "source": "a.properties"
+        }
       }
-   }
+    },
+    "comp1": {
+      "build": {
+        "propmerge": {
+          "source": "a.properties"
+        }
+      },
+      "dependencies": {
+        "comp2": {}
+      }
+    },
+    "HOT": {
+      "type": "environment"
+    },
+    "PRD": {
+      "type": "environment"
+    }
+  }
 }
