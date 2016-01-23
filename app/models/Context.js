@@ -2,5 +2,10 @@
 "use strict";
 
 export default class Context {
-  constructor() {}
+  constructor(config) {
+
+    Object.defineProperty(this, 'config', {
+      value: config
+    });
+  }
 }
