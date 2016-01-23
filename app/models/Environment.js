@@ -9,11 +9,13 @@ export default class Environment extends Component {
     super(name, coordinates, json);
 
     const servers = {};
-    Object.keys(json.servers).forEach(n => {
-      servers[n] = new Server(n);
-    });
+    if (json !== undefined && json.servers !== undefined) {
+      Object.keys(json.servers).forEach(n => {
+        servers[n] = new Server(n);
+      });
+    }
 
-    Object.defineProperties(this, 'servers', {
+    Object.defineProperty(this, 'servers', {
       value: servers
     });
   }
