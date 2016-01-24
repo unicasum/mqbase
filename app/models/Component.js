@@ -11,4 +11,8 @@ export default class Component extends Base {
       value: coordinates
     });
   }
+
+  get component_id() {
+    return this.name;
+  }
 }

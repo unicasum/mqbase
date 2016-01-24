@@ -19,4 +19,9 @@ export default class Environment extends Component {
       value: servers
     });
   }
+
+  get environment_id() {
+    return this.name;
+  }
+
 }

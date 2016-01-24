@@ -3,11 +3,18 @@
 {{model.description}}
 
 <ul>
-{{#each model.environmentsArray as |environment|}}
-<li>
-{{environment.name}}
-</li>
-{{/each}}
+{{#each-in model.environments as |name environment|}}
+{{#link-to "environment" environment}}
+<div class="ui ribbon label">{{environment.name}}</div>
+{{/link-to}}
+{{/each-in}}
+</ul>
+
+
+<ul>
+{{#each-in model.components as |name component|}}
+  <li>{{name}} {{component.name}}</li>
+{{/each-in}}
 </ul>
 
 {{outlet}}

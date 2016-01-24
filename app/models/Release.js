@@ -19,8 +19,6 @@ export default class Release extends Base {
     const environments = {};
     const components = {};
 
-    //console.log(`${this.name} ${JSON.stringify(dma.components)}`);
-
     Object.keys(dma.components).forEach(name => {
       const coordinates = dno.components ? dno.components[name].coordinates : undefined;
 
@@ -32,8 +30,6 @@ export default class Release extends Base {
       }
     });
 
-    //console.log(`Environments: ${Object.keys(environments)}`);
-
     Object.defineProperty(this, 'components', {
       value: components
     });
@@ -41,14 +37,6 @@ export default class Release extends Base {
     Object.defineProperty(this, 'environments', {
       value: environments
     });
-  }
-
-  get componentsArray() {
-    return Object.keys(this.components).map(n => this.components[n]);
-  }
-
-  get environmentsArray() {
-    return Object.keys(this.environments).map(n => this.environments[n]);
   }
 
   get release_id() {
