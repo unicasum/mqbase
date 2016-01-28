@@ -15,13 +15,7 @@ function loadRelease(name) {
     fetch(`data/releases/${name}/dma.json`).then(r => r.json()).catch(r => {
       console.log(`${name} dma.json: ${r}`);
     })
-  ]).then(rs => {
-    const dno = rs[0];
-    const dma = rs[1];
-
-    //console.log(`dno/dma ${name} ${JSON.stringify(dno)}, ${JSON.stringify(dma)}`);
-    return new Release(name, dno, dma);
-  }).catch(reject => {
+  ]).then(rs => new Release(name, rs[0], rs[1])).catch(reject => {
     console.log(`fetching ${name} failed with ${reject}`);
   });
 }
