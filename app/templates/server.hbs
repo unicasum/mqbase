@@ -1,3 +1,10 @@
 <h1>Server {{name}}</h1>
 
+
+<ul>
+{{#each-in model.packages as |name package|}}
+  <li>{{name}} {{package.version}}</li>
+{{/each-in}}
+</ul>
+
 {{outlet}}

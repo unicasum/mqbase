@@ -12,6 +12,10 @@ export default class Component extends Base {
     });
   }
 
+  get version() {
+    return this.coordinates.version;
+  }
+
   get component_id() {
     return this.name;
   }
