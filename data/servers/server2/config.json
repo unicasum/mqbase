@@ -1,0 +1,6 @@
+{
+  "packages": [{
+    "name": "package2",
+    "version": "1.2.3.4"
+  }]
+}

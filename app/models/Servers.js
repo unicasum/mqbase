@@ -11,7 +11,7 @@ export function find(name) {
     return servers[name];
   }
 
-  servers[name] = fetch(`data/servers${name}/config.json`).then(r => new Server(name, r.json()));
+  servers[name] = fetch(`data/servers/${name}/config.json`).then(r => new Server(name, r.json()));
 
   return servers[name];
 }
