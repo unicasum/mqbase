@@ -6,7 +6,7 @@ import Server from './Server';
 
 export default class Environment extends Component {
   constructor(name, coordinates, json) {
-    super(name, coordinates, json);
+    super(name, coordinates || {}, json);
 
     const servers = {};
     if (json !== undefined && json.servers !== undefined) {

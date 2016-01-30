@@ -16,6 +16,7 @@ Router.map(function () {
     path: '/environments/:environment_id'
   });
   this.route('properties');
+
   this.route('server', {
     path: '/servers/:server_id'
   });

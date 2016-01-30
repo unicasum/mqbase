@@ -5,7 +5,7 @@ import Base from './Base';
 
 export default class Component extends Base {
   constructor(name, coordinates, json) {
-    super(name, json.description);
+    super(name, json ? json.description : undefined);
 
     Object.defineProperty(this, 'coordinates', {
       value: coordinates

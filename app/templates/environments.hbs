@@ -5,17 +5,17 @@
   </tr>
 </thead>
 <tbody>
-  {{#each model as |environment|}}
+  {{#each-in model as |name environment|}}
   <tr>
     <td>
       <div class="ui label">
         {{#link-to "environment" environment}}
-        <i class="{{if environment.upToDate "green"}} {{if environment.outdated "red"}} warning sign icon"></i>{{environment.name}}
+        <i class="{{if environment.upToDate "green"}} {{if environment.outdated "red"}} warning sign icon"></i>{{name}}
         {{/link-to}}
       </div>
     </td>
   </tr>
-  {{/each}}
+  {{/each-in}}
 </tbody>
 </table>
 
