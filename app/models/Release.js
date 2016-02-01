@@ -3,6 +3,7 @@
 
 import Base from './Base';
 import Environment from './Environment';
+import Environments from './Environments';
 import Component from './Component';
 
 /*
@@ -24,7 +25,7 @@ export default class Release extends Base {
 
       const c = dma.components[name];
       if (c.type === 'environment') {
-        environments[name] = components[name] = new Environment(name, coordinates, c);
+        environments[name] = components[name] = Environments.create(name, coordinates, c);
       } else {
         components[name] = new Component(name, coordinates, c);
       }

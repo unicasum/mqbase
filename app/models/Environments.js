@@ -6,6 +6,7 @@ import Environment from './Environment';
 
 let environments;
 
+
 export function all() {
   if (environments) {
     return Promise.resolve(environments);
@@ -20,6 +21,10 @@ export function all() {
       });
       return environments;
     }));
+}
+
+export function create(name, coordinates, definition) {
+  return new Environment(name, coordinates, definition);
 }
 
 export function find(name) {
