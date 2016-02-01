@@ -2,7 +2,6 @@
 "use strict";
 
 import Base from './Base';
-import Environment from './Environment';
 import Environments from './Environments';
 import Component from './Component';
 
