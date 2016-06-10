@@ -4,7 +4,11 @@
 import fetch from 'fetch';
 import Release from './Release';
 
-let releases;
+/*
+import {
+  init as svn
+}
+from './svn';
 
 function loadRelease(name) {
   console.log(`loadRelease: ${name}`);
@@ -19,11 +23,27 @@ function loadRelease(name) {
     console.log(`fetching ${name} failed with ${reject}`);
   });
 }
+*/
+
+let releases;
 
 export function all() {
   if (releases) {
     return Promise.resolve(releases);
   }
+
+  svn('data/releases', {
+    credentials: {
+      user: 'arlac77',
+      password: 'start123'
+    }
+  }).then(svn => {
+    svn.report('data/releases', 0, svn.attributes['svn-youngest-rev']).then(r => {
+      console.log(`result: ${r}`);
+    });
+  }, e => {
+    console.log(e);
+  }).catch(e => console.log(e));
 
   return fetch('data/releases.json').then(response => response.json().then(
     json => {
